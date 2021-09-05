@@ -9,7 +9,7 @@ import { Tree, Node, NodeInfo, Controls, TogglerIconBox, Label, Content } from '
 const getExandableNodes = (tree) => {
   return traverseTree((acc, curr) => {
     return curr.children && curr.children.length ? [...acc, curr.id] : acc;
-  })([], tree);
+  }, [], tree);
 };
 
 const TreeView = ({
